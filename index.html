@@ -1,37 +1,41 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="vi" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dự Án Ý Tưởng Xanh – Nơi Làm Việc Sạch Đẹp</title>
+    <title>Dự Án "Ý Tưởng Xanh – Nơi Làm Việc Sạch Đẹp" - Nhóm 2</title>
+
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts: Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
       rel="stylesheet" />
+
+    <!-- Animate On Scroll Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body class="bg-gray-50 text-gray-800">
-    <!-- Header -->
-    <header class="bg-white/80 backdrop-blur-lg shadow-sm sticky top-0 z-50">
-      <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-        <a href="#" class="text-2xl font-bold text-green-700">Ý Tưởng Xanh</a>
-        <nav class="hidden md:flex space-x-8">
-          <a href="#vision" class="text-gray-600 hover:text-green-600 transition duration-300"
-            >Tầm Nhìn</a
-          >
-          <a href="#solutions" class="text-gray-600 hover:text-green-600 transition duration-300"
-            >Giải Pháp</a
-          >
-          <a href="#cost" class="text-gray-600 hover:text-green-600 transition duration-300"
-            >Chi Phí</a
-          >
-          <a href="#team" class="text-gray-600 hover:text-green-600 transition duration-300"
-            >Đội Ngũ</a
-          >
-        </nav>
-        <button id="mobile-menu-button" class="md:hidden text-gray-700 focus:outline-none">
+  <body class="text-gray-800">
+    <!-- Header & Navigation -->
+    <header class="bg-white/80 backdrop-blur-lg sticky top-0 z-50 shadow-sm">
+      <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+        <a href="#" class="text-2xl font-bold text-gray-800">
+          <span class="text-emerald-500">Ý Tưởng</span> Xanh
+        </a>
+        <div class="hidden md:flex space-x-8">
+          <a href="#vision" class="font-semibold">Tầm Nhìn</a>
+          <a href="#green-pillar" class="font-semibold">Trụ Cột "Xanh"</a>
+          <a href="#workspace" class="font-semibold">Không Gian Gọn Gàng</a>
+          <a href="#creative" class="font-semibold">Sáng Tạo</a>
+          <a href="#cost" class="font-semibold">Chi Phí</a>
+          <a href="#team" class="font-semibold">Thành viên thực hiện</a>
+        </div>
+        <button id="mobile-menu-button" class="md:hidden text-gray-800 focus:outline-none">
           <svg
             class="w-6 h-6"
             fill="none"
@@ -45,323 +49,401 @@
               d="M4 6h16M4 12h16m-7 6h7"></path>
           </svg>
         </button>
-      </div>
+      </nav>
       <!-- Mobile Menu -->
       <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
-        <a href="#vision" class="block py-2 text-gray-600 hover:text-green-600">Tầm Nhìn</a>
-        <a href="#solutions" class="block py-2 text-gray-600 hover:text-green-600">Giải Pháp</a>
-        <a href="#cost" class="block py-2 text-gray-600 hover:text-green-600">Chi Phí</a>
-        <a href="#team" class="block py-2 text-gray-600 hover:text-green-600">Đội Ngũ</a>
+        <a href="#vision" class="block py-2 font-semibold">Tầm Nhìn</a>
+        <a href="#green-pillar" class="block py-2 font-semibold">Trụ Cột "Xanh"</a>
+        <a href="#workspace" class="block py-2 font-semibold">Không Gian Gọn Gàng</a>
+        <a href="#creative" class="block py-2 font-semibold">Sáng Tạo</a>
+        <a href="#cost" class="block py-2 font-semibold">Chi Phí</a>
+        <a href="#team" class="block py-2 font-semibold">Nhóm 2</a>
       </div>
     </header>
 
-    <!-- Main Content -->
     <main>
       <!-- Hero Section -->
       <section
-        class="relative h-[60vh] md:h-[80vh] flex items-center justify-center text-center text-white bg-cover bg-center"
-        style="
-          background-image: url('https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=2070&auto=format&fit=crop');
-        ">
-        <div class="absolute inset-0 bg-black/50"></div>
-        <div class="relative z-10 p-6">
-          <h1 class="text-4xl md:text-6xl font-bold mb-4 leading-tight">
-            Ý TƯỞNG XANH – NƠI LÀM VIỆC SẠCH ĐẸP
-          </h1>
-          <p class="text-lg md:text-2xl font-light">
-            Kiến tạo không gian làm việc truyền cảm hứng | Nhóm 2 - MobiFone KV2
+        class="hero-section h-[60vh] md:h-[80vh] flex items-center justify-center text-white">
+        <div class="text-center" data-aos="fade-up">
+          <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-4">Ý TƯỞNG XANH</h1>
+          <p class="text-xl md:text-3xl font-light">
+            Kiến Tạo Nơi Làm Việc Sạch Đẹp & Truyền Cảm Hứng
           </p>
+          <p class="mt-2 font-semibold">Bài dự thi của Nhóm 2 - MobiFone KV2</p>
         </div>
       </section>
 
       <!-- Vision Section -->
-      <section id="vision" class="py-20 bg-white fade-in-section">
-        <div class="container mx-auto px-6 text-center">
-          <h2 class="text-3xl md:text-4xl font-bold text-green-800 mb-6">
-            Tầm Nhìn Của Chúng Tôi: Xanh Để Hơn Thế Nữa
-          </h2>
-          <p class="max-w-3xl mx-auto text-lg text-gray-600 mb-12">
-            Chúng tôi tin rằng việc đưa yếu tố "xanh" vào văn phòng không chỉ để trang trí. Đó là
-            một giải pháp chiến lược nhằm giải quyết các thách thức đặc thù của môi trường Call
-            Center, hướng tới một không gian làm việc trong lành, sáng tạo và gắn kết.
-          </p>
-          <div class="grid md:grid-cols-3 gap-8">
-            <!-- Feature 1 -->
+      <section id="vision" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+          <div class="text-center mb-12" data-aos="fade-up">
+            <h2 class="section-title text-4xl mb-2">Tầm Nhìn Chiến Lược</h2>
+            <p class="section-subtitle text-lg">Kiến Tạo Không Gian Làm Việc Truyền Cảm Hứng</p>
+          </div>
+          <div
+            class="max-w-4xl mx-auto text-lg text-gray-700 leading-relaxed text-center"
+            data-aos="fade-up"
+            data-aos-delay="100">
+            <p>
+              Môi trường làm việc tại Call Center đòi hỏi sự tập trung cao độ và dễ gây căng thẳng.
+              Việc cải tạo không gian theo hướng "xanh, sạch, đẹp" không chỉ là về thẩm mỹ, mà là
+              một chiến lược đầu tư vào tài sản quý giá nhất: con người. Một không gian làm việc
+              trong lành, sáng tạo sẽ giúp giảm căng thẳng, tăng cường sự tập trung, nâng cao hiệu
+              quả công việc và thể hiện sự quan tâm sâu sắc của doanh nghiệp đến đời sống tinh thần
+              của nhân viên.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Green Pillar Section -->
+      <section id="green-pillar" class="py-20">
+        <div class="container mx-auto px-6">
+          <div class="text-center mb-12" data-aos="fade-up">
+            <h2 class="section-title text-4xl mb-2">Trụ Cột "XANH"</h2>
+            <p class="section-subtitle text-lg">Mang Hơi Thở Thiên Nhiên Vào Văn Phòng</p>
+          </div>
+
+          <h3 class="text-2xl font-bold text-center text-gray-800 mb-8" data-aos="fade-up">
+            Biệt Đội Cây Xanh Ưu Việt
+          </h3>
+          <div class="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-8">
+            <!-- Plant Card: Lưỡi Hổ -->
+            <div class="card bg-white rounded-lg shadow-lg overflow-hidden" data-aos="fade-up">
+              <img
+                src="https://images.pexels.com/photos/2123482/pexels-photo-2123482.jpeg"
+                alt="Cây Lưỡi Hổ"
+                class="w-full h-48 object-cover" />
+              <div class="p-6">
+                <h4 class="font-bold text-xl mb-2">Cây Lưỡi Hổ</h4>
+                <p class="text-gray-600 text-sm">
+                  Sản xuất oxy ban đêm, lọc độc tố, xua đuổi điềm xui.
+                </p>
+              </div>
+            </div>
+            <!-- Plant Card: Kim Tiền -->
             <div
-              class="bg-green-50 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300">
-              <div class="text-4xl text-green-500 mb-4">🌿</div>
-              <h3 class="text-xl font-semibold mb-2">Sức Khỏe Là Trên Hết</h3>
-              <p class="text-gray-600">
-                Cây xanh thanh lọc không khí, hấp thụ độc tố từ thiết bị điện tử, giảm các bệnh về
-                hô hấp và làm dịu mắt.
+              class="card bg-white rounded-lg shadow-lg overflow-hidden"
+              data-aos="fade-up"
+              data-aos-delay="100">
+              <img
+                src="https://images.unsplash.com/photo-1597593873848-409a508574f9?q=80&w=736&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="Cây Kim Tiền"
+                class="w-full h-48 object-cover" />
+              <div class="p-6">
+                <h4 class="font-bold text-xl mb-2">Cây Kim Tiền</h4>
+                <p class="text-gray-600 text-sm">Hút tài lộc, thịnh vượng, lọc không khí tốt.</p>
+              </div>
+            </div>
+            <!-- Plant Card: Trầu Bà -->
+            <div
+              class="card bg-white rounded-lg shadow-lg overflow-hidden"
+              data-aos="fade-up"
+              data-aos-delay="200">
+              <img
+                src="https://images.pexels.com/photos/8580717/pexels-photo-8580717.jpeg"
+                alt="Cây Trầu Bà"
+                class="w-full h-48 object-cover" />
+              <div class="p-6">
+                <h4 class="font-bold text-xl mb-2">Cây Trầu Bà</h4>
+                <p class="text-gray-600 text-sm">
+                  Hấp thụ bức xạ điện tử, mang lại cảm giác thư thái.
+                </p>
+              </div>
+            </div>
+            <!-- Plant Card: Lan Ý -->
+            <div
+              class="card bg-white rounded-lg shadow-lg overflow-hidden"
+              data-aos="fade-up"
+              data-aos-delay="300">
+              <img
+                src="https://images.pexels.com/photos/6627081/pexels-photo-6627081.jpeg"
+                alt="Cây Lan Ý"
+                class="w-full h-48 object-cover" />
+              <div class="p-6">
+                <h4 class="font-bold text-xl mb-2">Cây Lan Ý</h4>
+                <p class="text-gray-600 text-sm">
+                  Lọc không khí, giữ ẩm, tượng trưng cho sự bình yên.
+                </p>
+              </div>
+            </div>
+            <!-- Plant Card: Dây Nhện -->
+            <div
+              class="card bg-white rounded-lg shadow-lg overflow-hidden"
+              data-aos="fade-up"
+              data-aos-delay="400">
+              <img
+                src="https://images.pexels.com/photos/4457654/pexels-photo-4457654.jpeg"
+                alt="Cây Dây Nhện"
+                class="w-full h-48 object-cover" />
+              <div class="p-6">
+                <h4 class="font-bold text-xl mb-2">Cây Dây Nhện</h4>
+                <p class="text-gray-600 text-sm">"Máy lọc không khí" hiệu quả, mang lại may mắn.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Arrangement -->
+          <div class="mt-20 grid md:grid-cols-2 gap-12 items-center">
+            <div data-aos="fade-right">
+              <h3 class="text-2xl font-bold text-gray-800 mb-4">
+                Nghệ Thuật Bố Trí Không Gian Xanh
+              </h3>
+              <p class="text-gray-700 leading-relaxed mb-4">
+                Bố trí cây xanh một cách khoa học để tối ưu hóa thẩm mỹ và công năng. Các cây lớn
+                như Đại Phú Gia, Phát Tài Núi được đặt tại không gian chung để tạo điểm nhấn. Đặc
+                biệt, kệ lục giác "Tổ Ong" là giải pháp sáng tạo cho các mảng tường trống, tăng thêm
+                sự đa dạng và phong phú cho không gian xanh.
+              </p>
+              <p class="text-gray-700 leading-relaxed font-semibold">
+                Kế hoạch chăm sóc "Mỗi Người Một Tay" sẽ được triển khai để đảm bảo sức sống bền
+                vững cho cây, đồng thời tăng cường tinh thần trách nhiệm và gắn kết tập thể.
               </p>
             </div>
-            <!-- Feature 2 -->
-            <div
-              class="bg-green-50 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300">
-              <div class="text-4xl text-green-500 mb-4">🚀</div>
-              <h3 class="text-xl font-semibold mb-2">Nâng Cao Hiệu Suất</h3>
-              <p class="text-gray-600">
-                Không gian thoáng đãng, gần gũi thiên nhiên giúp giảm căng thẳng, tăng cường sự tập
-                trung và thúc đẩy năng suất.
-              </p>
+            <div data-aos="fade-left">
+              <img
+                src="https://cafefcdn.com/thumb_w/640/203337114487263232/2021/8/24/photo-1-16298100215321789401939.jpg"
+                alt="Kệ lục giác trang trí"
+                class="rounded-lg shadow-xl w-full" />
             </div>
-            <!-- Feature 3 -->
-            <div
-              class="bg-green-50 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300">
-              <div class="text-4xl text-green-500 mb-4">🤝</div>
-              <h3 class="text-xl font-semibold mb-2">Gắn Kết & Lan Tỏa</h3>
-              <p class="text-gray-600">
-                Dự án khuyến khích sự tham gia của tập thể, xây dựng tinh thần trách nhiệm và nâng
-                cao hình ảnh công ty.
+          </div>
+        </div>
+      </section>
+
+      <!-- Workspace Section -->
+      <section id="workspace" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+          <div class="text-center mb-12" data-aos="fade-up">
+            <h2 class="section-title text-4xl mb-2">Triết Lý Bàn Làm Việc Tinh Gọn</h2>
+            <p class="section-subtitle text-lg">Giải Phóng Không Gian Tư Duy</p>
+          </div>
+          <div class="grid md:grid-cols-2 gap-12 items-center">
+            <div data-aos="fade-right">
+              <img
+                src="https://images.pexels.com/photos/1006293/pexels-photo-1006293.jpeg"
+                alt="Bàn làm việc gọn gàng"
+                class="rounded-lg shadow-xl w-full" />
+            </div>
+            <div data-aos="fade-left">
+              <h3 class="text-2xl font-bold text-gray-800 mb-4">Quy Trình 5 Bước Khoa Học</h3>
+              <ul class="space-y-3 text-gray-700">
+                <li class="flex items-start">
+                  <span class="text-emerald-500 font-bold mr-3">1.</span>
+                  <span><strong>Dọn sạch toàn bộ:</strong> Lau sạch bàn và các thiết bị.</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="text-emerald-500 font-bold mr-3">2.</span>
+                  <span><strong>Phân loại & Loại bỏ:</strong> Giữ lại, Cất trữ, hoặc Loại bỏ.</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="text-emerald-500 font-bold mr-3">3.</span>
+                  <span><strong>Sắp xếp logic:</strong> Bố trí lại các vật dụng cần thiết.</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="text-emerald-500 font-bold mr-3">4.</span>
+                  <span><strong>Duy trì thói quen:</strong> Dành 5 phút cuối ngày để sắp xếp.</span>
+                </li>
+              </ul>
+              <h4 class="text-xl font-bold text-gray-800 mt-6 mb-2">Giải Pháp Quản Lý Dây Cáp</h4>
+              <p class="text-gray-700">
+                Sử dụng ống đi dây và các giải pháp cố định để thu gọn dây điện, dây tai nghe, tăng
+                tính thẩm mỹ và độ bền cho không gian làm việc.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- Solutions Section -->
-      <section id="solutions" class="py-20 fade-in-section">
+      <!-- Creative Section -->
+      <section id="creative" class="py-20">
         <div class="container mx-auto px-6">
-          <h2 class="text-3xl md:text-4xl font-bold text-center text-green-800 mb-12">
-            Giải Pháp Toàn Diện
-          </h2>
-
-          <!-- Green Pillar -->
-          <div class="mb-16">
-            <h3 class="text-2xl font-semibold text-center mb-8">
-              Trụ Cột "XANH": Mang Thiên Nhiên Vào Văn Phòng
-            </h3>
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 items-center">
-              <div class="lg:col-span-2">
-                <h4 class="text-xl font-semibold mb-4">"Biệt Đội" Cây Xanh Ưu Việt</h4>
-                <p class="mb-6 text-gray-600">
-                  Chúng tôi ưu tiên các loại cây dễ chăm sóc, lọc không khí tốt và mang ý nghĩa
-                  phong thủy tích cực.
-                </p>
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  <div
-                    class="flex items-center bg-green-50 rounded-lg p-4 shadow hover:shadow-md transition">
-                    <div class="text-3xl mr-4">🌱</div>
-                    <div>
-                      <div class="font-bold text-green-800 text-lg">Lưỡi Hổ</div>
-                      <div class="text-gray-600 text-sm">Lọc độc tố, sản xuất oxy ban đêm.</div>
-                    </div>
-                  </div>
-                  <div
-                    class="flex items-center bg-green-50 rounded-lg p-4 shadow hover:shadow-md transition">
-                    <div class="text-3xl mr-4">💰</div>
-                    <div>
-                      <div class="font-bold text-green-800 text-lg">Kim Tiền</div>
-                      <div class="text-gray-600 text-sm">Hút tài lộc, thịnh vượng.</div>
-                    </div>
-                  </div>
-                  <div
-                    class="flex items-center bg-green-50 rounded-lg p-4 shadow hover:shadow-md transition">
-                    <div class="text-3xl mr-4">🌿</div>
-                    <div>
-                      <div class="font-bold text-green-800 text-lg">Trầu Bà</div>
-                      <div class="text-gray-600 text-sm">Hấp thụ bức xạ điện tử.</div>
-                    </div>
-                  </div>
-                  <div
-                    class="flex items-center bg-green-50 rounded-lg p-4 shadow hover:shadow-md transition">
-                    <div class="text-3xl mr-4">💧</div>
-                    <div>
-                      <div class="font-bold text-green-800 text-lg">Lan Ý</div>
-                      <div class="text-gray-600 text-sm">Lọc không khí, giữ ẩm tốt.</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+          <div class="text-center mb-12" data-aos="fade-up">
+            <h2 class="section-title text-4xl mb-2">Tái Chế và Sáng Tạo</h2>
+            <p class="section-subtitle text-lg">Biến Vật Cũ Thành Nét Đẹp Mới</p>
+          </div>
+          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Card: Trang trí tái chế -->
+            <div class="card bg-white rounded-lg shadow-lg" data-aos="fade-up">
               <img
-                src="https://images.unsplash.com/photo-1614594975525-e45190c55d0b?q=80&w=1974&auto=format&fit=crop"
-                onerror="this.onerror=null;this.src='https://placehold.co/600x400/a3e635/14532d?text=Lỗi+Tải+Ảnh';"
-                alt="Cây Đại Phú Gia trong văn phòng"
-                class="rounded-xl shadow-lg w-full h-auto object-cover" />
-            </div>
-          </div>
-
-          <!-- Creative Ideas -->
-          <div class="mb-16 bg-white p-8 md:p-12 rounded-xl shadow-lg">
-            <h3 class="text-3xl md:text-4xl font-bold text-center text-green-800 mb-8">
-              BỐ TRÍ VÀ SÁNG TẠO TRÊN TƯỜNG
-            </h3>
-            <div class="grid md:grid-cols-2 gap-8">
-              <div>
-                <img
-                  src="https://cdn.eva.vn//upload/2-2016/images/2016-04-11/rosenbaum-recycled-vertical-garden1-1460351603-width728height485.jpg"
-                  onerror="this.onerror=null;this.src='https://placehold.co/600x400/86efac/14532d?text=Lỗi+Tải+Ảnh';"
-                  alt="Vườn treo tường làm từ chai nhựa tái chế"
-                  class="rounded-xl shadow-md mb-4 w-full h-64 object-cover" />
-                <h4 class="text-xl font-semibold mb-2">Vườn Treo Tường Tái Chế</h4>
+                src="https://vesinhnha.com.vn/wp-content/uploads/2019/03/cach-tai-che-chai-nhua.png"
+                alt="Trang trí từ vật liệu tái chế"
+                class="w-full h-56 object-cover rounded-t-lg" />
+              <div class="p-6">
+                <h4 class="font-bold text-xl mb-2">Trang Trí Tái Chế</h4>
                 <p class="text-gray-600">
-                  Giải pháp đột phá cho không gian hạn chế, biến tường trống thành vườn thẳng đứng
-                  từ chai nhựa, khuyến khích sự tham gia của mọi người.
-                </p>
-              </div>
-              <div>
-                <img
-                  src="https://i.pinimg.com/736x/19/40/b6/1940b68cbf09a5ed9f110fb540eedcf1.jpg"
-                  onerror="this.onerror=null;this.src='https://placehold.co/600x400/4ade80/14532d?text=Lỗi+Tải+Ảnh';"
-                  alt="Kệ gỗ lục giác trang trí cây xanh"
-                  class="rounded-xl shadow-md mb-4 w-full h-64 object-cover" />
-                <h4 class="text-xl font-semibold mb-2">Kệ Lục Giác "Tổ Ong"</h4>
-                <p class="text-gray-600">
-                  Những chiếc kệ gỗ hình lục giác tạo góc trang trí sống động và hiện đại cho các
-                  loại cây nhỏ, tận dụng các mảng tường trống.
+                  Sử dụng chai lọ cũ, đĩa CD hỏng để tạo ra những lọ hoa, đồ trang trí mosaic độc
+                  đáo, không "đụng hàng".
                 </p>
               </div>
             </div>
-          </div>
-
-          <!-- Lean Desk & Recycle -->
-          <div class="grid md:grid-cols-2 gap-8">
-            <div class="bg-green-50 p-8 rounded-xl shadow-lg">
-              <h3 class="text-2xl font-semibold mb-4">Triết Lý Bàn Làm Việc Tinh Gọn</h3>
-              <p class="mb-4 text-gray-600">
-                Một không gian ngăn nắp sẽ giúp giải phóng tư duy, tăng cường sự tập trung và giảm
-                cảm giác quá tải.
-              </p>
-              <ul class="list-disc list-inside space-y-2 text-gray-700">
-                <li><strong>Dọn sạch:</strong> Lấy mọi thứ ra khỏi bàn.</li>
-                <li><strong>Phân loại:</strong> Giữ lại, Cất trữ, Loại bỏ.</li>
-                <li><strong>Sắp xếp:</strong> Bố trí vật dụng cần thiết khoa học.</li>
-                <li><strong>Duy trì:</strong> Dành 5 phút cuối ngày để dọn dẹp.</li>
-              </ul>
+            <!-- Card: Cozy Corner -->
+            <div class="card bg-white rounded-lg shadow-lg" data-aos="fade-up" data-aos-delay="100">
+              <img
+                src="https://images.pexels.com/photos/7318959/pexels-photo-7318959.jpeg"
+                alt="Góc thư giãn"
+                class="w-full h-56 object-cover rounded-t-lg" />
+              <div class="p-6">
+                <h4 class="font-bold text-xl mb-2">Góc Thư Giãn "Cozy Corner"</h4>
+                <p class="text-gray-600">
+                  Tạo một "ốc đảo" thư thái với vách ngăn cây xanh, ghế gấp gọn thoải mái và ánh
+                  sáng vàng ấm cúng.
+                </p>
+              </div>
             </div>
-            <div class="bg-green-50 p-8 rounded-xl shadow-lg">
-              <h3 class="text-2xl font-semibold mb-4">Tái Chế & Sáng Tạo</h3>
-              <p class="mb-4 text-gray-600">
-                Biến những vật dụng cũ thành đồ trang trí độc đáo, tạo nên một "Cozy Corner" thư
-                giãn và tối ưu hóa ánh sáng, màu sắc.
-              </p>
-              <ul class="list-disc list-inside space-y-2 text-gray-700">
-                <li>Lọ hoa độc đáo từ chai thủy tinh.</li>
-                <li>Trang trí mosaic từ đĩa CD/DVD cũ.</li>
-                <li>Góc thư giãn với ghế lười và ánh sáng ấm.</li>
-              </ul>
+            <!-- Card: Ánh sáng & Màu sắc -->
+            <div class="card bg-white rounded-lg shadow-lg" data-aos="fade-up" data-aos-delay="200">
+              <img
+                src="https://png.pngtree.com/thumb_back/fh260/background/20240912/pngtree-a-colorful-light-effect-with-swirling-lines-of-energy-on-dark-image_16183243.jpg"
+                alt="Ánh sáng và màu sắc"
+                class="w-full h-56 object-cover rounded-t-lg" />
+              <div class="p-6">
+                <h4 class="font-bold text-xl mb-2">Sức Mạnh Ánh Sáng & Màu Sắc</h4>
+                <p class="text-gray-600">
+                  Tối ưu hóa ánh sáng tự nhiên và sử dụng các gam màu trung tính kết hợp điểm nhấn
+                  để tạo không gian rộng rãi, chuyên nghiệp.
+                </p>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
       <!-- Cost Section -->
-      <section id="cost" class="py-20 bg-white fade-in-section">
+      <section id="cost" class="py-20 bg-white">
         <div class="container mx-auto px-6">
-          <h2 class="text-3xl md:text-4xl font-bold text-center text-green-800 mb-12">
-            CHI PHÍ DỰ KIẾN
-          </h2>
-          <div class="max-w-4xl mx-auto">
-            <p class="text-center text-lg text-gray-600 mb-8">
-              Triết lý của chúng tôi là "tối đa hóa hiệu quả, tối thiểu hóa chi phí", tập trung vào
-              việc tận dụng sự sáng tạo và vật liệu tái chế.
-            </p>
-            <div class="overflow-x-auto bg-white rounded-lg shadow-xl">
+          <div class="text-center mb-12" data-aos="fade-up">
+            <h2 class="section-title text-4xl mb-2">Phân Tích và Dự Tính Chi Phí</h2>
+            <p class="section-subtitle text-lg">Tối Đa Hóa Hiệu Quả, Tối Thiểu Hóa Chi Phí</p>
+          </div>
+          <div class="max-w-4xl mx-auto" data-aos="fade-up">
+            <div class="bg-white shadow-xl rounded-lg overflow-hidden">
               <table class="w-full text-left">
-                <thead class="bg-green-600 text-white">
+                <thead class="bg-gray-100">
                   <tr>
-                    <th class="p-4 font-semibold">Hạng mục</th>
-                    <th class="p-4 font-semibold text-right">Chi phí dự tính (VNĐ)</th>
+                    <th class="p-4 font-bold text-gray-700">Hạng mục</th>
+                    <th class="p-4 font-bold text-gray-700">Mô tả chi tiết</th>
+                    <th class="p-4 font-bold text-gray-700 text-right">Chi phí dự tính (VND)</th>
                   </tr>
                 </thead>
                 <tbody>
-                  <tr class="border-b hover:bg-gray-100">
-                    <td class="p-4">Vườn treo tường</td>
-                    <td class="p-4 text-right font-mono">1.000.000</td>
+                  <tr class="border-b">
+                    <td class="p-4 font-semibold">Chậu cây</td>
+                    <td class="p-4 text-gray-600">
+                      15 chậu để bàn, 10 chậu treo tường, cây cho Vườn Pallet
+                    </td>
+                    <td class="p-4 text-right font-mono">3,000,000</td>
                   </tr>
-                  <tr class="border-b hover:bg-gray-100">
-                    <td class="p-4">Khung gỗ, chai lọ, cây xanh nhỏ</td>
-                    <td class="p-4 text-right font-mono">3.000.000</td>
+                  <tr class="border-b bg-gray-50">
+                    <td class="p-4 font-semibold">Giá treo tường</td>
+                    <td class="p-4 text-gray-600">10 giá lục giác hoặc giá ngang</td>
+                    <td class="p-4 text-right font-mono">400,000</td>
                   </tr>
-                  <tr class="border-b hover:bg-gray-100">
-                    <td class="p-4">Cây xanh để bàn & góc văn phòng (30 chậu)</td>
-                    <td class="p-4 text-right font-mono">3.000.000</td>
+                  <tr class="border-b">
+                    <td class="p-4 font-semibold">Cây hành lang</td>
+                    <td class="p-4 text-gray-600">2 cây lớn cho lối vào</td>
+                    <td class="p-4 text-right font-mono">2,000,000</td>
                   </tr>
-                  <tr class="border-b hover:bg-gray-100">
-                    <td class="p-4">Vật tư cơ bản (sơn, keo, dụng cụ)</td>
-                    <td class="p-4 text-right font-mono">1.000.000</td>
+                  <tr class="border-b bg-gray-50">
+                    <td class="p-4 font-semibold">Vật dụng cơ bản</td>
+                    <td class="p-4 text-gray-600">Dây thừng trang trí, keo, đèn...</td>
+                    <td class="p-4 text-right font-mono">200,000</td>
                   </tr>
-                  <tr class="border-b hover:bg-gray-100">
-                    <td class="p-4">Dự phòng phát sinh</td>
-                    <td class="p-4 text-right font-mono">2.000.000</td>
-                  </tr>
-                  <tr class="bg-green-100 font-bold">
-                    <td class="p-4 text-lg">TỔNG CỘNG (ƯỚC TÍNH)</td>
-                    <td class="p-4 text-right text-lg font-mono">10.000.000</td>
+                  <tr class="border-b">
+                    <td class="p-4 font-semibold">Ghế gấp gọn</td>
+                    <td class="p-4 text-gray-600">2 ghế cho góc thư giãn</td>
+                    <td class="p-4 text-right font-mono">500,000</td>
                   </tr>
                 </tbody>
+                <tfoot>
+                  <tr class="bg-blue-900 text-white font-bold">
+                    <td class="p-4 text-xl" colspan="2">TỔNG CỘNG (ƯỚC TÍNH)</td>
+                    <td class="p-4 text-right text-xl font-mono">6,100,000</td>
+                  </tr>
+                </tfoot>
               </table>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- Team Section -->
-      <section id="team" class="py-20 fade-in-section">
-        <div class="container mx-auto px-6 text-center">
-          <h2 class="text-3xl md:text-4xl font-bold text-green-800 mb-12">Đội Ngũ Thực Hiện</h2>
+      <!-- Call to Action & Team Section -->
+      <section id="team" class="py-20 bg-emerald-600 text-white">
+        <div class="container mx-auto px-6 text-center" data-aos="fade-up">
+          <h2 class="text-3xl md:text-4xl font-bold mb-4">Tổng Kết và Lời Kêu Gọi Hành Động</h2>
+          <p class="max-w-3xl mx-auto text-lg leading-relaxed mb-8">
+            Dự án "Ý Tưởng Xanh" là một sáng kiến chiến lược nhằm biến nơi làm việc thành "ngôi nhà
+            thứ hai" đầy năng lượng và cảm hứng. Thành công của dự án phụ thuộc vào sự chung tay của
+            tất cả mọi người. Hãy cùng nhau hành động!
+          </p>
+          <h3 class="text-2xl font-semibold mb-4">Thành viên lên ý tưởng</h3>
           <div
-            class="max-w-4xl mx-auto grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 text-gray-700">
-            <div class="bg-white p-4 rounded-lg shadow-md">Nguyễn Duy Hải</div>
-            <div class="bg-white p-4 rounded-lg shadow-md">Đỗ Quế Anh</div>
-            <div class="bg-white p-4 rounded-lg shadow-md">Thới Hoàng Chánh</div>
-            <div class="bg-white p-4 rounded-lg shadow-md">Trần Thị Mỹ Ngân</div>
-            <div class="bg-white p-4 rounded-lg shadow-md">Phạm Thị Triều Tiên</div>
-            <div class="bg-white p-4 rounded-lg shadow-md">Nguyễn Mạnh Trường</div>
-            <div class="bg-white p-4 rounded-lg shadow-md">Phạm Ngọc Anh Thư</div>
-            <div class="bg-white p-4 rounded-lg shadow-md">Dương Gia Linh</div>
-            <div class="bg-white p-4 rounded-lg shadow-md">Cao Thị Thủy Tiên</div>
-            <div class="bg-white p-4 rounded-lg shadow-md">Nguyễn Phạm Trung Trinh</div>
-            <div class="bg-white p-4 rounded-lg shadow-md">Phan Vũ Hoài Nam</div>
+            class="max-w-4xl mx-auto grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 text-sm">
+            <p>Nguyễn Duy Hải</p>
+            <p>Đỗ Quế Anh</p>
+            <p>Thới Hoàng Chánh</p>
+            <p>Trần Thị Mỹ Ngân</p>
+            <p>Phạm Thị Triều Tiên</p>
+            <p>Nguyễn Mạnh Trường</p>
+            <p>Phạm Ngọc Anh Thư</p>
+            <p>Dương Gia Linh</p>
+            <p>Cao Thị Thủy Tiên</p>
+            <p>Nguyễn Phạm Trung Trinh</p>
+            <p>Phan Vũ Hoài Nam</p>
           </div>
         </div>
       </section>
     </main>
 
     <!-- Footer -->
-    <footer class="bg-green-800 text-white">
-      <div class="container mx-auto px-6 py-8 text-center">
-        <p class="font-semibold text-lg mb-2">Dự Án "Ý Tưởng Xanh – Nơi Làm Việc Sạch Đẹp"</p>
-        <p>&copy; 2025 Nhóm 2 - MobiFone KV2. All rights reserved.</p>
-        <p class="text-sm text-green-200 mt-2">TP. Hồ Chí Minh, Tháng 7 năm 2025</p>
+    <footer class="bg-gray-800 text-white py-6">
+      <div class="container mx-auto px-6 text-center">
+        <p>&copy; 2025 - Dự Án "Ý Tưởng Xanh" - Nhóm 2.</p>
+        <p class="text-sm text-gray-400 mt-2">Website được tạo để minh họa cho bài dự thi.</p>
       </div>
     </footer>
 
+    <!-- Scroll to Top Button -->
+    <button
+      id="to-top-button"
+      title="Go To Top"
+      class="hidden fixed z-50 bottom-10 right-10 p-4 border-0 w-14 h-14 rounded-full shadow-md bg-emerald-500 hover:bg-emerald-600 text-white text-lg font-semibold transition-colors duration-300">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        fill="currentColor"
+        class="w-6 h-6">
+        <path d="M12 4l8 8h-6v8h-4v-8H4l8-8z" />
+      </svg>
+    </button>
+
+    <!-- AOS Script -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-      // JavaScript for mobile menu toggle
+      // Initialize Animate on Scroll
+      AOS.init({
+        duration: 800,
+        once: true
+      });
+
+      // Mobile menu toggle
       const mobileMenuButton = document.getElementById('mobile-menu-button');
       const mobileMenu = document.getElementById('mobile-menu');
       mobileMenuButton.addEventListener('click', () => {
         mobileMenu.classList.toggle('hidden');
       });
 
-      // Close mobile menu when a link is clicked
-      const mobileMenuLinks = mobileMenu.getElementsByTagName('a');
-      for (let link of mobileMenuLinks) {
-        link.addEventListener('click', () => {
-          mobileMenu.classList.add('hidden');
-        });
-      }
-
-      // Intersection Observer for fade-in animations
-      const sections = document.querySelectorAll('.fade-in-section');
-      const observer = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              entry.target.style.animationPlayState = 'running';
-              observer.unobserve(entry.target);
-            }
-          });
-        },
-        { threshold: 0.1 }
-      );
-
-      sections.forEach((section) => {
-        // Initially pause the animation
-        section.style.animationPlayState = 'paused';
-        observer.observe(section);
+      // Scroll to top button
+      const toTopButton = document.getElementById('to-top-button');
+      window.onscroll = function () {
+        if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+          toTopButton.classList.remove('hidden');
+        } else {
+          toTopButton.classList.add('hidden');
+        }
+      };
+      toTopButton.addEventListener('click', function () {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
       });
     </script>
   </body>
